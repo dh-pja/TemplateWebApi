@@ -1,3 +1,6 @@
 namespace TemplateWebApi.Contracts.Responses;
 
-public record GetSampleResponse();
+public record struct GetSampleResponse(
+    int Id,
+    string Name
+    );

@@ -1,3 +1,6 @@
+using TemplateWebApi.Repositories;
+using TemplateWebApi.Repositories.Interfaces;
+
 namespace TemplateWebApi;
 
 
@@ -10,6 +13,8 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
+        builder.Services.AddScoped<ISampleRepository, SampleRepository>();
+        
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
